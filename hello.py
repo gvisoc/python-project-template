@@ -1,3 +1,1 @@
-print(
-    "Hello. The world is round, we've been to the Moon, and the vaccines work."
-)
+print('Hello. The world is round, we\'ve been to the Moon, and the vaccines work.')
