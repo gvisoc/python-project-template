@@ -29,7 +29,7 @@ Now, let's initialise the Python virtual environment and all these helper tools.
 2. Change the line `language-version: python3.9` in `.pre-commit-config.yaml` so that it matches the version under the line `[requires]` of the newly created `Pipfile`
 3. Enter the Python virtual environment with `pipenv shell`
 4.  Run `pre-commit install` to set up your hooks in your `.git/`
-5.  Update the versions of `flake8` and `black` that are wrapped by pre-commit, by running `pre-commit autoupdate`
+5.  Update the versions of Flake8 and Black that are wrapped by pre-commit, by running `pre-commit autoupdate`
 
 ## Try it Out
 This project example includes a file, `hello.py`, with the following content:
