@@ -140,7 +140,7 @@ TOTAL                     3      1    67%
 FAIL Required test coverage of 85% not reached. Total coverage: 66.67%
 =================================== 1 passed in 0.30s ====================================
 ```
-Now the last 2 lines can be confusing, because we see "FAIL" and also "1 passed". This means that, although the test passed (`assert True` always is a pass), the overall process failed and this execution will return the Unix exit code 1, which will allow us to stop continuous build, continouos integration or deployment pipelines:
+Now the last 2 lines can be confusing, because we see "FAIL" and also "1 passed". This means that, although the test passed (`assert True` is always a pass), the overall process failed and this execution will return the Unix exit code 1, which will allow us to stop continuous build, continouos integration or deployment pipelines:
 ```zsh
 $ echo $?
 1
