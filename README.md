@@ -45,7 +45,7 @@ Now, try to commit the code with `git add . && git commit -a -m "test commit"`.
 
 You should see someting similar to the following:
 
-```zsh
+```bash
 black....................................................................Failed
 - hook id: black
 - files were modified by this hook
@@ -76,7 +76,7 @@ Execute the tests with the following sentence: `poetry run pytest --cov=example 
 
 You will see the following:
 
-```zsh
+```bash
 ================================== test session starts ===================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/gabriel/ws/python/python-project-template
@@ -96,7 +96,7 @@ Required test coverage of 85% reached. Total coverage: 100.00%
 =================================== 1 passed in 0.30s ====================================
 ```
 This returns to the system the exit code 0:
-```zsh
+```bash
 $ echo $?
 0
 ```
@@ -120,7 +120,7 @@ def test_inc():
     assert True
 ```
 This test won't use our module at all, so the coverage level will fall. Repeat the same test execution sentence. Now you'll see an error report due to the coverage level failing below 85%:
-```zsh
+```bash
 $ poetry run pytest --cov=example -n 2 --cov-fail-under=85  
 ================================== test session starts ===================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
@@ -141,7 +141,7 @@ FAIL Required test coverage of 85% not reached. Total coverage: 66.67%
 =================================== 1 passed in 0.30s ====================================
 ```
 Now the last 2 lines can be confusing, because we see "FAIL" and also "1 passed". This means that, although the test passed (`assert True` is always a pass), the overall process failed and this execution will return the Unix exit code 1. This will allow us to stop continuous build, continous integration or deployment pipelines:
-```zsh
+```bash
 $ echo $?
 1
 ```
@@ -152,14 +152,27 @@ Poetry makes the packaging of the module as easy as running `poetry build`. Chec
 ## Reproduce for Your Project
 The way to use this template is no longer to copy and tweak this project. Instead, you can reproduce most of it yourself. Begin by using the following sequence of commands:
 
-```zsh
+```bash
 $ poetry new my-project
 $ cd my-project
 $ git init .
 # this will start an interactive process; fill the data
 $ poetry add --dev pytest pytest-cov pytest-xdist pre-commit flake8 black
 ```
-The above will initialise the project for both Git and Poetry, with a predefined structure for a module and also with support for unit tests. Do not forget to set a `.gitignore` file that works for your environment.
+The above will initialise the project for both Git and Poetry, with a predefined structure for a module and also with support for unit tests:
+```bash
+$ tree my-project    
+my-project
+├── my_project
+│   └── __init__.py
+├── pyproject.toml
+├── README.rst
+└── tests
+    ├── __init__.py
+    └── test_my_project.py
+```
+
+Do not forget to set a `.gitignore` file that works for your environment.
 
 Now create a file named `.pre-commit-config.yaml` at the project root, and set it up with the hooks for Black and Flake8:
 ```yaml
@@ -201,7 +214,7 @@ exclude = '''
 '''
 ```
 Finish wiring these two tools with the pre-commit stage of Git:
-```zsh
+```bash
 $ poetry run pre-commit install
 $ poetry run pre-commit auto-update
 ```
