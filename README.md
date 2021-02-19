@@ -158,7 +158,9 @@ $ cd my-project
 $ git init .
 $ poetry add --dev pytest=^6.0.0 pytest-cov pytest-xdist pre-commit flake8 black
 ```
-The above will initialise the project for both Git and Poetry, with a predefined structure for a module and also with support for unit tests:
+The above will initialise the project for both Git and Poetry. It's worth noting that the version of pytest requested by the command is 6.0.0, or more, at the time of writing this, because the one provided by `poetry new` causes dependency problems when adding pytest-cov. However, that version may not be valid *at the time of you trying all this*. Check the [syntax of `poetry add`](https://python-poetry.org/docs/cli/#add) to know more about specifying versions. 
+
+The above set of commands will create a project with a predefined structure for a module and also with support for unit tests:
 ```bash
 $ tree -a my-project    
 my-project
