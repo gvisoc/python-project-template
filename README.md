@@ -1,5 +1,5 @@
 # Python Project Template
-This is my personal template for Python projects, and it is a work in progress (see [Next Steps](#next-steps)).
+This is my personal template for Python **module** projects, and it is a work in progress (see [Next Steps](#next-steps)).
 
 It is based on Poetry, and includes configuration sections in `pyproject.toml` to use Black as the formatter and Flake8 as the style checker. They can be hooked to the Git workflow by means of the pre-commit Python package. It also uses Pytest with Pytest-cov to run unit tests and test coverage reports.
 
