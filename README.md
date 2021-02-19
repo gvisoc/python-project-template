@@ -161,8 +161,10 @@ $ poetry add --dev pytest pytest-cov pytest-xdist pre-commit flake8 black
 ```
 The above will initialise the project for both Git and Poetry, with a predefined structure for a module and also with support for unit tests:
 ```bash
-$ tree my-project    
+$ tree -a my-project    
 my-project
+├── .git
+│   └── (...)           # Not really interesting
 ├── my_project          # Code the module inside this directory
 │   └── __init__.py
 ├── pyproject.toml
@@ -217,6 +219,23 @@ Finish wiring these two tools with the pre-commit stage of Git:
 ```bash
 $ poetry run pre-commit install
 $ poetry run pre-commit auto-update
+```
+
+The project should look like this:
+```bash
+$ tree -a my-project    # From the parent directory
+my-project
+├── .git
+│   └── (...)
+├── .gitignore
+├── my_project
+│   └── __init__.py
+├── .pre-commit-config.yaml
+├── pyproject.toml
+├── README.rst
+└── tests
+    ├── __init__.py
+    └── test_my_project.py
 ```
 
 All done; time to do some Python-fu.
