@@ -156,7 +156,6 @@ The way to use this template is no longer to copy and tweak this project. Instea
 $ poetry new my-project
 $ cd my-project
 $ git init .
-# this will start an interactive process; fill the data
 $ poetry add --dev pytest pytest-cov pytest-xdist pre-commit flake8 black
 ```
 The above will initialise the project for both Git and Poetry, with a predefined structure for a module and also with support for unit tests:
