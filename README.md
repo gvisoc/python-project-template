@@ -206,7 +206,7 @@ $ poetry run pre-commit install
 $ poetry run pre-commit auto-update
 ```
 
-All done.
+All done; time to do some Python-fu.
 
 # Next Steps
 - Test a CI integration with Poetry.
