@@ -1,5 +1,5 @@
 # Python Project Template
-This is my personal template for Python projects, and is a work in progress (see [Next Steps](#next-steps)).
+This is my personal template for Python projects, and it is a work in progress (see [Next Steps](#next-steps)).
 
 It is based on Poetry, and includes configuration sections in `pyproject.toml` to use Black as the formatter and Flake8 as the style checker. They can be hooked to the Git workflow by means of the pre-commit Python package. It also uses Pytest with Pytest-cov to run unit tests and test coverage reports.
 
@@ -11,10 +11,10 @@ The chosen standard formatting is very close to [PEP 8](https://www.python.org/d
 The idea is to enforce a code style and formatting that reduces false differences the pull requests, due to formatting differences. It is also good for it to be automated, so that it doesn't introduce extra steps that can be forgotten.
 
 ## Install Python 3 and Poetry
-Install a stable release of Python 3 on your system, and then install Poetry. Poetry provides an installation script with support for maintenance operations; check [its own instructions](https://python-poetry.org/docs/#installation).
+Install a stable release of [Python 3](https://python.org) on your system, and then install Poetry. Poetry provides an installation script with support for maintenance operations; check [its own instructions](https://python-poetry.org/docs/#installation).
 
 
-## Clone and play with this repository
+## Clone and Play With This Repository
 Clone this repository to start.
 
 Initialise the Python virtual environment and all these helper tools.
@@ -32,7 +32,7 @@ def inc(i):
     return i + 1
 ```
 
-### Try the Git workflow enhanced with code formatter and style check 
+### Try The Git Workflow Enhanced with a Code Formatter and a Style Checker 
 The first thing that can be tried is to break the formatting of the file. Add some spaces around the `i` parameter:
 
 ```Python
@@ -57,7 +57,7 @@ All done! ✨ 🍰 ✨
 flake8...................................................................Passed
 ```
 
-**The commit was aborted**, as Black failed. However, it reformatted `hello.py` and that made Flake8 to pass. If you now open it, you'll see that the code has changed back to the original content:
+**The commit was abandoned**, as Black failed. However, it reformatted `hello.py` and that made Flake8 to pass. If you now open it, you'll see that the code has changed back to the original content:
 
 ```Python
 def inc(i):
@@ -67,7 +67,7 @@ def inc(i):
 
 If now you repeat the commit, it will succeed because Black will find nothing to do, and Flake8 will still obviously pass. 
 
-## Try the testing framework
+### Try the Testing Framework
 Execute the tests with the following sentence: `poetry run pytest --cov=example -n 2 --cov-fail-under=85`. The parameters mean the following:
 
 - `--cov=example` narrows the coverage report to the module inside the project, to ignore other libraries and the tests themselves.
@@ -146,10 +146,10 @@ $ echo $?
 1
 ```
 
-## Package the module
+### Packaging the Module
 Poetry makes the packaging of the module as easy as running `poetry build`. Check [its documentation](https://python-poetry.org/docs/) for more information.
 
-## Reproduce for your project
+## Reproduce for Your Project
 The way to use this template is no longer to copy and tweak this project. Instead, you can reproduce most of it yourself. Begin by using the following sequence of commands:
 
 ```zsh
