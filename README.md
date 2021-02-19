@@ -15,17 +15,16 @@ Install a stable release of Python 3 on your system, and then install Poetry. Po
 
 
 ## Clone and play with this repository
-
 Clone this repository to start.
 
 Initialise the Python virtual environment and all these helper tools.
 1. Install all the dependencies preconfigured in this repo by executing `poetry install`
-2. Change the line `language-version: python3.9` in `.pre-commit-config.yaml` so that it matches the version under the line `[requires]` of the newly created `Pipfile`
+2. Check that the line `language-version: python3.9` in `.pre-commit-config.yaml` still matches the version under the line `[tool.poetry.dependencies]` of the file `pyproject.toml`; this might have been updated by the previous command. If needed, update the line accordingly.
 3.  Run `poetry run pre-commit install` to set up your hooks in your `.git/`
 4.  Update the versions of Flake8 and Black that are wrapped by pre-commit, by running `poetry run pre-commit autoupdate`
 
 ## Try it Out
-Have a look to the Python code inside the `example` module, `hello.py`, which includes a function called `inc`:
+Have a look to the Python code inside the `example` module, `example/hello.py`, which includes a function called `inc`:
 
 ```Python
 def inc(i):
@@ -47,7 +46,6 @@ Now, try to commit the code with `git add . && git commit -a -m "test commit"`.
 You should see someting similar to the following:
 
 ```zsh
-(my-project) ➜  my-project git:(main) ✗ git commit -a -m "Initial Commit"
 black....................................................................Failed
 - hook id: black
 - files were modified by this hook
@@ -70,7 +68,6 @@ def inc(i):
 If now you repeat the commit, it will succeed because Black will find nothing to do, and Flake8 will still obviously pass. 
 
 ## Try the testing framework
-
 Execute the tests with the following sentence: `poetry run pytest --cov=example -n 2 --cov-fail-under=85`. The parameters mean the following:
 
 - `--cov=example` narrows the coverage report to the module inside the project, to ignore other libraries and the tests themselves.
@@ -82,7 +79,7 @@ You will see the following:
 ```zsh
 ================================== test session starts ===================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
-rootdir: /home/gabriel/ws/python/poetry-demo
+rootdir: /home/gabriel/ws/python/python-project-template
 plugins: xdist-2.2.1, cov-2.11.1, forked-1.3.0
 gw0 [1] / gw1 [1]
 .                                                                                  [100%]
@@ -127,7 +124,7 @@ This test won't use our module at all, so the coverage level will fall. Repeat t
 $ poetry run pytest --cov=example -n 2 --cov-fail-under=85  
 ================================== test session starts ===================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
-rootdir: /home/gabriel/ws/python/poetry-demo
+rootdir: /home/gabriel/ws/python/python-project-template
 plugins: xdist-2.2.1, cov-2.11.1, forked-1.3.0
 gw0 [1] / gw1 [1]
 .                                                                                  [100%]
