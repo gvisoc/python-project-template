@@ -163,12 +163,12 @@ The above will initialise the project for both Git and Poetry, with a predefined
 ```bash
 $ tree my-project    
 my-project
-├── my_project
+├── my_project          # Code the module inside this directory
 │   └── __init__.py
 ├── pyproject.toml
 ├── README.rst
-└── tests
-    ├── __init__.py
+└── tests               # Tests here
+    ├── __init__.py     
     └── test_my_project.py
 ```
 
