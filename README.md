@@ -8,7 +8,7 @@ It is based on Poetry, and includes configuration sections in `pyproject.toml` t
 
 The chosen standard formatting is very close to [PEP 8](https://www.python.org/dev/peps/pep-0008/), if not "PEP 8 strict".
 
-The idea is to enforce a code style and formatting that reduces false differences the pull requests, due to formatting differences. It is also good for it to be automated, so that it doesn't introduce extra steps that can be forgotten.
+The idea is to enforce a code style and formatting that reduces false differences in the pull requests, due to formatting differences. It is also good for it to be automated, so that it doesn't introduce extra steps that can be forgotten.
 
 ## Install Python 3 and Poetry
 Install a stable release of [Python 3](https://python.org) on your system, and then install Poetry. Poetry provides an installation script with support for maintenance operations; check [its own instructions](https://python-poetry.org/docs/#installation).
