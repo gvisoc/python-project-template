@@ -163,7 +163,7 @@ The above will initialise the project for both Git and Poetry, with a predefined
 $ tree -a my-project    
 my-project
 ├── .git
-│   └── (...)           # Not really interesting
+│   └── (...)           # Not really interesting to show
 ├── my_project          # Code the module inside this directory
 │   └── __init__.py
 ├── pyproject.toml
@@ -225,7 +225,7 @@ The project should look like this:
 $ tree -a my-project    # From the parent directory
 my-project
 ├── .git
-│   └── (...)           # Not really interesting
+│   └── (...)           # Not really interesting to show
 ├── .gitignore          # Avoid commiting builds, caches, etc.
 ├── my_project          # Code the module inside this directory
 │   └── __init__.py
