@@ -153,13 +153,13 @@ Poetry makes the packaging of the module as easy as running `poetry build`. Chec
 The way to use this template is no longer to copy and tweak this project. Instead, you can reproduce most of it yourself. Begin by using the following sequence of commands:
 
 ```zsh
-$ mkdir my-project && cd my-project
-$ git init
-$ poetry init
+$ poetry new my-project
+$ cd my-project
+$ git init .
 # this will start an interactive process; fill the data
 $ poetry add --dev pytest pytest-cov pytest-xdist pre-commit flake8 black
 ```
-The above will initialise the project for both Git and Poetry. Do not forget to set a `.gitignore` file that works for your environment.
+The above will initialise the project for both Git and Poetry, with a predefined structure for a module and also with support for unit tests. Do not forget to set a `.gitignore` file that works for your environment.
 
 Now create a file named `.pre-commit-config.yaml` at the project root, and set it up with the hooks for Black and Flake8:
 ```yaml
