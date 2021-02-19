@@ -226,14 +226,14 @@ The project should look like this:
 $ tree -a my-project    # From the parent directory
 my-project
 ├── .git
-│   └── (...)
-├── .gitignore
-├── my_project
+│   └── (...)           # Not really interesting
+├── .gitignore          # Avoid commiting builds, caches, etc.
+├── my_project          # Code the module inside this directory
 │   └── __init__.py
 ├── .pre-commit-config.yaml
 ├── pyproject.toml
 ├── README.rst
-└── tests
+└── tests               # Tests here
     ├── __init__.py
     └── test_my_project.py
 ```
