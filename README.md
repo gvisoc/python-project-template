@@ -17,7 +17,6 @@ Install a stable release of [Python 3](https://python.org) on your system, and t
 ## Clone and Play With This Repository
 Clone this repository to start.
 
-Initialise the Python virtual environment and all these helper tools.
 1. Install all the dependencies preconfigured in this repo by executing `poetry install`
 2. Check that the line `language-version: python3.9` in `.pre-commit-config.yaml` still matches the version under the line `[tool.poetry.dependencies]` of the file `pyproject.toml`; this might have been updated by the previous command. If needed, update the line accordingly.
 3.  Run `poetry run pre-commit install` to set up your hooks in your `.git/`
