@@ -1,4 +1,8 @@
-# Python Project Template
+# Python Project Template (archived)
+> **Warning**
+> This repository is **archived** in GitHub and will no longer be maintained here.
+> This repository lives [here](https://forja.gvisoc.com/gabriel/python-project-template) now.
+
 This is my personal template for Python **module** projects, and it is a work in progress (see [Next Steps](#next-steps)).
 
 It is based on Poetry, and includes configuration sections in `pyproject.toml` to use Black as the formatter and Flake8 as the style checker. They can be hooked to the Git workflow by means of the pre-commit Python package. It also uses Pytest with Pytest-cov to run unit tests and test coverage reports.
